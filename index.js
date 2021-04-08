@@ -10,7 +10,7 @@ async function main() {
   try {
     const reader = new Reader();
 
-    const data = await reader.read("src/english_words.csv");
+    const data = await reader.read("src/public/english_words.csv");
     const processedData = Processor.Process(data);
 
     const {rowCount, columnCount, getHeaderAndRows} = new Table(processedData);
